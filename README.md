@@ -30,15 +30,40 @@ Pages are specific instances of templates. Here, placeholder content is replaced
 
 Below are detailed explanation of 12-factor principles
 
-Codebase: Use a single codebase per application, managed in version control. Multiple codebases indicate a distributed system.
-Dependencies: Explicitly declare and isolate dependencies to avoid version conflicts and simplify development.
-Config: Store configurations (e.g., database credentials) separately from the code, in environment variables, for flexibility across different environments.
-Backing Services: Treat external services (e.g., databases) as attached resources, ensuring easy interchangeability.
-Build, Release, Run: Separate the deployment process into three phases: build, release, and run, to streamline and manage deployments.
-Processes: Design applications to run as stateless processes, allowing instances to start and stop independently without affecting functionality.
-Port Binding: Applications should export services via port binding and be self-contained, reducing the need for additional server software.
-Concurrency: Divide applications into smaller, independently scalable processes for better horizontal scaling and concurrency.
-Disposability: Maximize robustness with quick startup and graceful shutdown, ensuring that process failures don't disrupt the application.
-Development/Production Parity: Keep development, staging, and production environments as similar as possible to catch issues early and streamline deployment.
-Logs: Treat logs as event streams for debugging and monitoring, and don't tightly couple logging to the application.
-Admin Processes: Run
+Codebase:
+    Use a single codebase per application, managed in version control. Multiple codebases indicate a distributed system.
+
+Dependencies: 
+    Explicitly declare and isolate dependencies to avoid version conflicts and simplify development.
+
+Config:
+    Store configurations (e.g., database credentials) separately from the code, in environment variables, for flexibility across different environments.
+
+Backing Services: 
+    Treat external services (e.g., databases) as attached resources, ensuring easy interchangeability.
+
+Build, Release, Run: 
+    Separate the deployment process into three phases: build, release, and run, to streamline and manage deployments.
+
+Processes: 
+    Design applications to run as stateless processes, allowing instances to start and stop independently without affecting functionality.
+
+Port Binding: 
+    Applications should export services via port binding and be self-contained, reducing the need for additional server software.
+
+Concurrency:
+    Divide applications into smaller, independently scalable processes for better horizontal scaling and concurrency.
+
+Disposability: 
+    Maximize robustness with quick startup and graceful shutdown, ensuring that process failures don't disrupt the application.
+
+Development/Production Parity:  
+    Keep development, staging, and production environments as similar as possible to catch issues early and streamline deployment.
+
+Logs: 
+    Treat logs as event streams for debugging and monitoring, and don't tightly couple logging to the application.
+
+Admin Processes:
+    Run administrative tasks as part of the application codebase, adhering to the 12-factor principles for consistency.
+
+
