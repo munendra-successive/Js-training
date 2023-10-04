@@ -1,4 +1,4 @@
------------------------------------------------------- ATOMIC DESIGN -----------------------------------------------------------
+---------------------------------------------------------------ATOMIC DESIGN ---------------------------------------------------------------------
 
 What is Atomic Design
 
@@ -24,7 +24,8 @@ At the template stage, we break our chemistry analogy to get into language that 
 Pages
 Pages are specific instances of templates. Here, placeholder content is replaced with real representative content to give an accurate depiction of what a user will ultimately see.
 
-                                    ---  12-Factor App  ---
+
+---------------------------------------------------------  12-Factor App  --------------------------------------------------------------------------
 
 12-factor app is a methodology or set of principles for building the scalable and performant, independent, and most resilient enterprise applications. It establishes the general principles and guidelines for creating robust enterprise applications. 12-factor app principles got very popular as it aligns with Microservice principles
 
