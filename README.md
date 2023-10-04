@@ -1,6 +1,6 @@
                                 --- ATOMIC DESIGN ---
 
-What is Atomic Design 
+What is Atomic Design
 
 Atomic design is methodology for creating design systems. There are five distinct levels in atomic design:
 -Atoms
