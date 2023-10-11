@@ -22,7 +22,7 @@ class Person {
   }
 }
 
-const obj = [
+const userDetails = [
   {
     name: "munendra",
     age: 23,
@@ -33,5 +33,5 @@ const obj = [
   },
 ];
 const person = new Person("monu", "kushwaha");
-console.log(person.averageAge(obj));
+console.log(person.averageAge(userDetails));
 console.log(person.fullName());
