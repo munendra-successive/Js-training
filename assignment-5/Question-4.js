@@ -13,19 +13,19 @@ const book = {
   arr: [3, 4, 3, 2, 1],
 };
 
-const objcopy = function (input) {
-  if (typeof input !== "object") {
-    return input;
+const getDeepCopy = function (originalObject) {
+  if (typeof originalObject !== "object") {
+    return originalObject;
   }
-  let copy = Array.isArray(input) ? [] : {};
-  for (key in input) {
-    const value = input[key];
-    copy[key] = objcopy(value);
+  const deepCopy = Array.isArray(originalObject) ? [] : {};
+  for (key in originalObject) {
+    const value = originalObject[key];
+    deepCopy[key] = getDeepCopy(value);
   }
-  return copy;
+  return deepCopy;
 };
 
-var newobj = objcopy(book);
+const deepCopy = getDeepCopy(book);
 book.greet.greet.greet = "HEllo How are you";
 console.log(book);
-console.log(newobj);
+console.log(deepCopy);
