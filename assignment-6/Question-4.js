@@ -23,9 +23,9 @@ class Person {
 }
 
 const obj = [
-  { 
-    name: "munendra", 
-    age: 23 
+  {
+    name: "munendra",
+    age: 23,
   },
   {
     name: "monu",
