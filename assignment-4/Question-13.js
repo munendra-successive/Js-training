@@ -3,7 +3,7 @@ input: [3,4,1,2,0]
 output:[4,2,3,0,1]
 */
 
-let arr = [3, 4, 1, 2, 0];
+const arr = [3, 4, 1, 2, 0];
 
 function inversArray(arr) {
   let ans = [];

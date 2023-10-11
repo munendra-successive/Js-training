@@ -6,3 +6,6 @@ for (let index in str) {
   ans += str[index].split("").reverse().join("") + " ";
 }
 console.log(ans);
+
+
+

@@ -8,6 +8,6 @@ console.log(ans);
 
 // into uppercase
 
-var str1 = "I am in Successive Digital";
-var ans1 = str.toUpperCase();
+let str1 = "I am in Successive Digital";
+let ans1 = str.toUpperCase();
 console.log(ans1);
