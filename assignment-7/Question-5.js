@@ -1,0 +1,65 @@
+/*
+
+Write a program to implement a Promise-based task queue, that processes tasks in a specified order, 
+with a specified concurrency limit
+
+
+*/
+
+
+const priority = () => Math.floor(Math.random() * 10);
+let tasks = [];
+for (let i = 0; i < 10; i++) {
+  tasks[i] = {
+    task: new Promise((resolve) => {
+      resolve(`Task ${i + 1}`);
+    }),
+    p: priority(),
+  };
+}
+class promiseBasedQueue {
+  constructor(tasks, limit) {
+    this.tasks = tasks;
+    this.currRun = [];
+    this.limit = limit;
+    this.running = [];
+  }
+
+  getStatus() {
+    return this.tasks.length;
+  }
+  delay(ms) {
+    return function (v) {
+      return new Promise((resolve) => setTimeout(() => resolve(v), ms));
+    };
+  }
+  async run() {
+    while (this.getStatus()) {
+      while (this.getStatus() > 0 && this.currRun.length < this.limit) {
+        this.currRun.push(this.tasks.shift());
+      }
+      this.currRun.sort((a, b) => {
+        if (b.p < a.p) {
+          return 1;
+        }
+        if (b.p > a.p) {
+          return -1;
+        }
+        return 0;
+      });
+
+      this.currRun.forEach((obj) => {
+        this.running.push(obj.task);
+      });
+
+      const result = await Promise.all(this.running).then(this.delay(2000));
+      result.forEach((element, index) => {
+        console.log(element + " " + this.currRun[index].p);
+      });
+      this.currRun = [];
+      this.running = [];
+    }
+  }
+}
+const queue = new promiseBasedQueue(tasks, 3);
+queue.run();
