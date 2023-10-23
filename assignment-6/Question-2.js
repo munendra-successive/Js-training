@@ -6,6 +6,10 @@ class Shape {
     this.width = width;
     this.height = height;
   }
+  getArea()
+  {
+      return 0;
+  }
 }
 class Rectangle extends Shape {
   constructor(width, height) {
