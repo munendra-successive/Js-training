@@ -1,5 +1,5 @@
-// 1. Give an example of using a callback
-//    function to handle an asynchronous operation in JavaScript (Use any open api to make a call)
+/* 1. Give an example of using a callback
+  function to handle an asynchronous operation in JavaScript (Use any open api to make a call)  */
 
 const cb = (data) => {
   console.log(data);
