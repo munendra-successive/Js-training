@@ -4,7 +4,6 @@ a. add(a, b): takes two numbers as arguments and returns their sum.
 b. subtract(a, b): takes two numbers as arguments and returns their difference.
 create a new file index.js and just export those functions and then use those function in any of the file
 */
-
-import { add, subtract } from "./math/math.js";
+import { add, subtract } from "./math.js";
 console.log(add(3, 4));
 console.log(subtract(11, 9));
