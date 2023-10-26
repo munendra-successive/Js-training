@@ -1,7 +1,9 @@
-export const add = (firstNumber, secondNumber) => {
+const add = (firstNumber, secondNumber) => {
   return firstNumber + secondNumber;
 };
 
-export const subtract = (firstNumber, secondNumber) => {
+const subtract = (firstNumber, secondNumber) => {
   return firstNumber - secondNumber;
 };
+
+export {add,subtract}
